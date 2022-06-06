@@ -1,0 +1,40 @@
+From a6461663643627ebcf940a4b598ea989fdfaa52d Mon Sep 17 00:00:00 2001
+From: MeshachArinze <meshachfresh@gmail.com>
+Date: Mon, 6 Jun 2022 16:06:39 +0100
+Subject: [PATCH] Meshach_Ekene
+
+---
+ client3.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/client3.py b/client3.py
+index 14fb14e..a4e01b1 100644
+--- a/client3.py
++++ b/client3.py
+@@ -43,7 +43,6 @@ def getRatio(price_a, price_b):
+ 	""" ------------- Update this function ------------- """
+ 	""" Also create some unit tests for this function in client_test.py """
+ 	if (price_b == 0):
+-		#when price_b is zero avoid throwing ZerodivisionError
+ 		return
+ 	return price_a / price_b
+ 
+@@ -51,7 +50,8 @@ def getRatio(price_a, price_b):
+ if __name__ == "__main__":
+ 
+ 	# Query the price once every N seconds.
+-	for _ in range(N):
++	
++	for _ in (range(N)):
+ 		quotes = json.loads(urllib.request.urlopen(QUERY.format(random.random())).read())
+ 
+ 		""" ----------- Update to get the ratio --------------- """
+@@ -61,4 +61,4 @@ if __name__ == "__main__":
+ 			prices[stock] = price
+ 			print ("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+ 
+-		print ("Ratio %s" % getRatio(prices['ABC'], prices['DEF']))
++		print ("Ratio %s" % (getRatio(prices['ABC'], prices['DEF'])))
+-- 
+2.36.0.windows.1
+
